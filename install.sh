@@ -15,7 +15,7 @@ sudo pacman -S --needed --noconfirm \
 
 echo "=== 4. Installation des composants de l'interface, du son & AUR ==="
 sudo pacman -S --needed --noconfirm \
-  waybar rofi swaync hyprpaper pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pavucontrol playerctl cava curl jq
+  neohtop waybar rofi swaync hyprpaper pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pavucontrol playerctl cava curl jq
 
 # Installation automatique de yay si absent
 if ! command -v yay &> /dev/null; then
