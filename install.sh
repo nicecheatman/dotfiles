@@ -18,15 +18,17 @@ sudo pacman -S --needed --noconfirm \
 
 echo "=== 6. Installation des logiciels du quotidien ==="
 sudo pacman -S --needed --noconfirm \
- git firefox obsidian steam mangohud gamemode mpv imv nemo qbittorrent bitwarden flatpak unzip zip ncdu
+ waybar-module-pacman-updates-git cava git firefox obsidian steam mangohud gamemode mpv imv nemo qbittorrent bitwarden flatpak unzip zip ncdu
 
 echo "=== 7. Déploiement des configurations (Dotfiles) ==="
 mkdir -p ~/.config
 cp -r ./config/hypr ~/.config/
 cp -r ./config/waybar ~/.config/
+cp -r ./config/theme ~/.config/
+cp -r ./config/waybar-weather ~/.config/
 
 echo "=== 8. Activation des services système ==="
 sudo systemctl enable NetworkManager
-sudo systemctl enable ly
+sudo systemctl enable ly@tty2.service
 
 echo "=== Terminé ! Tu peux redémarrer ton PC avec la commande 'reboot' ==="
